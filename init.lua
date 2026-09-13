@@ -52,12 +52,12 @@ lsp.ols = {
 }
 vim.lsp.enable(
     {
-        'rust_analyzer',
+        --'rust_analyzer',
         'lua_ls',
         'clangd',
-        'denols',
-        'zls',
-        'ols',
+        --'denols',
+        --'zls',
+        --'ols',
     }
 )
 
@@ -78,10 +78,16 @@ vim.diagnostic.config({ virtual_text = true })
 vim.g["conjure#mapping#doc_word"] = { "<leader>k" }
 
 vim.api.nvim_create_autocmd("FileType", {
-    group = vim.api.nvim_create_augroup("tree-sitter-enable", { clear = true }),
+    group = vim.api.nvim_create_augroup(
+        "tree-sitter-enable", { clear = true }
+    ),
     callback = function(args)
         local lang = vim.treesitter.language.get_lang(args.match)
-        if not lang or not vim.treesitter.language.add(lang) then return end
+        if not lang or
+            not vim.treesitter.language.add(lang)
+        then
+            return
+        end
 
         if vim.treesitter.query.get(lang, "highlights") then
             vim.treesitter.start(args.buf)
@@ -98,7 +104,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
-package.path = "/data/data/com.termux/files/home/.config/nvim/?.lua;"
+package.path = os.getenv("HOME") .. "/.config/nvim/?.lua;"
     .. package.path
 
 require "keybinds"
