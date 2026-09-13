@@ -68,7 +68,8 @@ local cmds = {
     "set shiftwidth=4",
     "set softtabstop=4",
     "set smartindent",
-    "set expandtab"
+    "set expandtab",
+    "set scrolloff=6"
 }
 for _, v in pairs(cmds) do
     vim.cmd(v)

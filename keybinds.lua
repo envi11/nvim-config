@@ -7,3 +7,4 @@ vim.keymap.set("n", "<C-q>", ":q!<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>o", ":update<CR>:source<CR>")
 --vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y') -- why doesnt this work
+vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
