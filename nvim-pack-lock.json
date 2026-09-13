@@ -1,0 +1,68 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "8e5e03f1ef7991d74950c245910e6118f6d95e3b",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.compat": {
+      "rev": "1454f14a8d855a578ceeba77c62538fa1459a67c",
+      "src": "https://github.com/saghen/blink.compat"
+    },
+    "blink.lib": {
+      "rev": "f55df8a6e0a7acccf45ef0ffbb4ce46110fcf7d0",
+      "src": "https://github.com/saghen/blink.lib"
+    },
+    "cmp-conjure": {
+      "rev": "8c9a88efedc0e5bf3165baa6af8a407afe29daf6",
+      "src": "https://github.com/PaterJason/cmp-conjure"
+    },
+    "conjure": {
+      "rev": "84c739c753bd07c006849d10ebce1863dd41af7f",
+      "src": "https://github.com/Olical/conjure"
+    },
+    "friendly-snippets": {
+      "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
+      "src": "https://github.com/rafamadriz/friendly-snippets"
+    },
+    "gruvbox-material": {
+      "rev": "11d779b26a9ab2b3db8c22c6ac9fb6e8ed4fea79",
+      "src": "https://github.com/sainnhe/gruvbox-material"
+    },
+    "jai.vim": {
+      "rev": "c5c9ec952fb4db2e5d71881dfd2d099c06725e68",
+      "src": "https://github.com/rluba/jai.vim"
+    },
+    "lualine.nvim": {
+      "rev": "221ce6b2d999187044529f49da6554a92f740a96",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "mason.nvim": {
+      "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "nvim-highlight-colors": {
+      "rev": "e4c7af0211866162d999ce0bdd6a029302e19139",
+      "src": "https://github.com/brenoprata10/nvim-highlight-colors"
+    },
+    "nvim-lspconfig": {
+      "rev": "84252f9832fb5b9024fe9f7258e7c2aff915e6fb",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "41416e81a6c7f4af4984395bfe0cd8d174e70976",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-web-devicons": {
+      "rev": "5f032a85be210cd1c6ac98861eb3b187ff3bd5eb",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "vim-fugitive": {
+      "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
+      "src": "https://github.com/tpope/vim-fugitive"
+    },
+    "vim-oscyank": {
+      "rev": "d67d76b2f19b868b70a1cf33a779d71dc092cb30",
+      "src": "https://github.com/ojroques/vim-oscyank"
+    }
+  }
+}
