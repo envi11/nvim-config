@@ -16,6 +16,8 @@ vim.pack.add({
     gh "PaterJason/cmp-conjure",
     gh "Olical/conjure",
     gh "rluba/jai.vim",
+    gh "assistcontrol/readline.nvim",
+    gh "vim-scripts/transpose-words",
 })
 vim.cmd "colorscheme gruvbox-material"
 require("lualine").setup {
@@ -43,11 +45,17 @@ cmp.setup({
     },
 })
 local lsp = vim.lsp.config
-lsp.ols = {
+-- lsp.ols = {
+--     cmd = {
+--         "grun",
+--         os.getenv("HOME")
+--         .. "/thirdparty/ols-arm64-unknown-linux-gnu"
+--     }
+-- }
+lsp.clangd = {
     cmd = {
-        "grun",
-        os.getenv("HOME")
-        .. "/thirdparty/ols-arm64-unknown-linux-gnu"
+        "clangd",
+        "--fallback-style=WebKit",
     }
 }
 vim.lsp.enable(
@@ -60,6 +68,16 @@ vim.lsp.enable(
         --'ols',
     }
 )
+local readline = require 'readline'
+vim.keymap.set('!', '<M-f>', readline.forward_word)
+vim.keymap.set('!', '<M-b>', readline.backward_word)
+vim.keymap.set('!', '<C-a>', readline.beginning_of_line)
+vim.keymap.set('!', '<C-e>', readline.end_of_line)
+vim.keymap.set('!', '<M-d>', readline.kill_word)
+vim.keymap.set('!', '<M-BS>', readline.backward_kill_word)
+vim.keymap.set('!', '<C-w>', readline.unix_word_rubout)
+vim.keymap.set('!', '<C-k>', readline.kill_line)
+vim.keymap.set('!', '<C-u>', readline.backward_kill_line)
 
 local cmds = {
     "set number",
