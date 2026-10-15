@@ -2,6 +2,7 @@ local gh = function(x) return "https://github.com/" .. x end
 vim.pack.add({
     gh "sainnhe/gruvbox-material",
     gh "nvim-treesitter/nvim-treesitter",
+    gh "nvim-mini/mini.nvim",
     gh "nvim-tree/nvim-web-devicons",
     gh "nvim-lualine/lualine.nvim",
     gh "brenoprata10/nvim-highlight-colors",
@@ -16,19 +17,31 @@ vim.pack.add({
     gh "PaterJason/cmp-conjure",
     gh "Olical/conjure",
     gh "rluba/jai.vim",
+    gh "leafo/moonscript-vim",
     gh "assistcontrol/readline.nvim",
     gh "vim-scripts/transpose-words",
+    gh "m4xshen/autoclose.nvim",
 })
 vim.cmd "colorscheme gruvbox-material"
 require("lualine").setup {
     options = { theme = "gruvbox-material" }
 }
+require('mini.align').setup()
 require("nvim-highlight-colors").setup({})
 require("mason").setup {
     firewall = {
         enabled = true
     }
 }
+require("autoclose").setup({
+    keys = {
+        ["'"] = { escape = false, close = false },
+        ["`"] = { escape = false, close = false },
+    },
+    options = {
+        disable_when_touch = true,
+    }
+})
 local cmp = require("blink.cmp")
 cmp.setup({
     fuzzy = { implementation = "lua" },
@@ -95,6 +108,7 @@ end
 vim.o.signcolumn = "yes"
 vim.diagnostic.config({ virtual_text = true })
 vim.g["conjure#mapping#doc_word"] = { "<leader>k" }
+vim.g["conjure#filetypes"] = { "clojure", "fennel", "python" }
 
 vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup(

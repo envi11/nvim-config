@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "autoclose.nvim": {
+      "rev": "bcad8e84d9cd78ba73433cb396b68e489af11e31",
+      "src": "https://github.com/m4xshen/autoclose.nvim"
+    },
     "blink.cmp": {
       "rev": "8e5e03f1ef7991d74950c245910e6118f6d95e3b",
       "src": "https://github.com/saghen/blink.cmp"
@@ -39,6 +43,14 @@
     "mason.nvim": {
       "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
       "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.nvim": {
+      "rev": "8831fa150fa26492cfe135801fa498132f1491d2",
+      "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "moonscript-vim": {
+      "rev": "715c96c7c3b02adc507f84bf5754985460afc426",
+      "src": "https://github.com/leafo/moonscript-vim"
     },
     "nvim-highlight-colors": {
       "rev": "e4c7af0211866162d999ce0bdd6a029302e19139",
